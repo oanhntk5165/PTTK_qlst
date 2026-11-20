@@ -1,0 +1,11 @@
+<%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<%!
+    private String h(Object value) {
+        if (value == null) return "";
+        return String.valueOf(value).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;").replace("'", "&#39;");
+    }
+    private String money(java.math.BigDecimal value) {
+        if (value == null) return "0";
+        return java.text.NumberFormat.getNumberInstance(new java.util.Locale("vi", "VN")).format(value);
+    }
+%>

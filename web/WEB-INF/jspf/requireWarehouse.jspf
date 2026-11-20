@@ -1,0 +1,1 @@
+<% if (!"WAREHOUSE".equals(session.getAttribute("role")) || session.getAttribute("userId")==null) { response.sendRedirect(request.getContextPath()+"/user/FrmLogin5.jsp"); return; } %>
